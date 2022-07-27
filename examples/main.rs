@@ -1,7 +1,9 @@
-use rmw_config::config;
+use log::info;
 
 fn main() {
-  config!(rmw);
-  let mtu = get!(v4_mtu, 1440);
-  dbg!(mtu);
+  rmw_log::init()
+    .level_for("surf", log::LevelFilter::Warn)
+    .apply()
+    .unwrap();
+  info!("test");
 }

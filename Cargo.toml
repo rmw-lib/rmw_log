@@ -1,28 +1,26 @@
 [package]
-name = "rmw_config"
+name = "rmw_log"
 version = "0.0.7"
 edition = "2021"
 authors = ["gcxfd <i@rmw.link>"]
 license = "Apache-2.0"
 description = "set / get config from config file and env"
-repository = "https://github.com/rmw-lib/rmw_config"
+repository = "https://github.com/rmw-lib/rmw_log"
 readme = "README.md"
-keywords = ["rmw_config"]
+keywords = ["rmw_log"]
 
 [dependencies]
+chrono = "0.4.19"
+colored = "2.0.0"
+fern = { version = "0.6.1", features = [] }
 log = "0.4.17"
-err = { version = "0.0.5", package = "rmw_err" }
-rmw_str = "0.0.7"
-parking_lot = "0.12.1"
-const-str = "0.4.3"
-env_dir = "0.0.7"
 
 [dev-dependencies]
 
 #[[bin]]
 # bench = false
 # path = "src/main.rs"
-# name = "rmw_config"
+# name = "rmw_log"
 # [profile.release]
 # lto = true
 # codegen-units = 1
