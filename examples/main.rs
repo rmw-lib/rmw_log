@@ -1,7 +1,7 @@
-use anyhow::Result;
-use rust_tmpl::add;
+use rmw_config::config;
 
-fn main() -> Result<()> {
-  dbg!(add(1, 2));
-  Ok(())
+fn main() {
+  config!(rmw);
+  let mtu = get!(v4_mtu, 1440);
+  dbg!(mtu);
 }

@@ -1,32 +1,28 @@
 [package]
-name = "rust_tmpl"
+name = "rmw_config"
 version = "0.0.6"
 edition = "2021"
 authors = ["gcxfd <i@rmw.link>"]
 license = "Apache-2.0"
-description = "rust_tmpl"
-repository = "https://github.com/rmw-lib/rust_tmpl"
+description = "set / get config from config file and env"
+repository = "https://github.com/rmw-lib/rmw_config"
 readme = "README.md"
-keywords = ["rust_tmpl"]
+keywords = ["rmw_config"]
 
 [dependencies]
+log = "0.4.17"
+err = { version = "0.0.5", package = "rmw_err" }
+rmw_str = "0.0.7"
+parking_lot = "0.12.1"
+const-str = "0.4.3"
+env_dir = "0.0.7"
 
 [dev-dependencies]
-anyhow = "1.0.58"
-criterion = "0.3.6"
-rand = "0.8.5"
-
-[profile.bench]
-lto = true
-
-[[bench]]
-name = "main"
-harness = false
 
 #[[bin]]
 # bench = false
 # path = "src/main.rs"
-# name = "rust_tmpl"
+# name = "rmw_config"
 # [profile.release]
 # lto = true
 # codegen-units = 1

@@ -23,5 +23,4 @@ RUST_BACKTRACE=1 exec watchexec \
   --shell=none -w . \
   -c -r --exts rs,toml \
   --ignore target/ \
-  -- ./sh/$cmd.sh
-  # -- ./sh/$cmd.sh --example main
+  -- ./sh/$cmd.sh --example main
